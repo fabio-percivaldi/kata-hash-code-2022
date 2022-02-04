@@ -86,7 +86,7 @@ const readFileAndComputeAlgoritm = (filename) => {
       for (let row = 0; row < composedMatrix.length; row++) {
         let actualSize = 0
         for (let column = 0; column < composedMatrix[row].length; column++) {
-          if (composedMatrix[row][column] === -1 || column === composedMatrix[row].length) {
+          if (composedMatrix[row][column] !== 0 || column === composedMatrix[row].length) {
             actualSize = 0
             continue
           }
@@ -109,6 +109,9 @@ const readFileAndComputeAlgoritm = (filename) => {
               }
               break
             }
+          }
+          if (servers[serverIndex].used) {
+            break
           }
         }
         if (servers[serverIndex].used) {
