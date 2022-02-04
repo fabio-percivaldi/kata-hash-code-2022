@@ -26,8 +26,8 @@ const initMatrix = (rows, columns) => {
 }
 const sortServers = (servers) => {
   return servers.sort((serverX, serverY) => {
-    const scoreX = serverX.capacity / serverY.size
-    const scoreY = serverY.capacity / serverY.size
+    const scoreX = serverX.capacity
+    const scoreY = serverY.capacity
     if (scoreX < scoreY) {
       return 1
     }
@@ -44,11 +44,11 @@ const readFileAndComputeAlgoritm = (filename) => {
   const rl = readline.createInterface(filestream)
 
   let index = -1
-  let rows, columns, numberOfUnavailableServer, numberOfPool, numberOfServer
+  let rows, columns, numberOfUnavailableServer, numberOfPool
   rl.on('line', (line) => {
     index += 1
     if (index === 0) {
-      [rows, columns, numberOfUnavailableServer, numberOfPool, numberOfServer] = line.split(' ')
+      [rows, columns, numberOfUnavailableServer, numberOfPool] = line.split(' ')
       matrix = initMatrix(rows, columns)
       return
     }
