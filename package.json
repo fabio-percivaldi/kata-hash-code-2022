@@ -1,0 +1,26 @@
+{
+  "name": "kata-hash-code-2022",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fabio-percivaldi/kata-hash-code-2022.git"
+  },
+  "devDependencies": {
+    "@mia-platform/eslint-config-mia": "^3.0.0",
+    "eslint": "^7.19.0"
+  },
+  "eslintConfig": {
+    "extends": "@mia-platform/eslint-config-mia"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fabio-percivaldi/kata-hash-code-2022/issues"
+  },
+  "homepage": "https://github.com/fabio-percivaldi/kata-hash-code-2022#readme"
+}
